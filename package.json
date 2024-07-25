@@ -13,5 +13,8 @@
   },
   "author": "Chanchal Sadhukhan",
   "license": "ISC",
-  "description": "Smart Parking Lot System"
+  "description": "Smart Parking Lot System",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
 }
