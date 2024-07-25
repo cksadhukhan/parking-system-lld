@@ -7,6 +7,6 @@ export class BusFeeStrategy implements FeeCalculationStrategy {
     const duration =
       (transaction.exitTime!.getTime() - transaction.entryTime.getTime()) /
       (1000 * 60 * 60);
-    return duration * ParkingFees.Bus;
+    return Number((duration * ParkingFees.Bus).toFixed(2));
   }
 }

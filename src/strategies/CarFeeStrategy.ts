@@ -7,6 +7,6 @@ export class CarFeeStrategy implements FeeCalculationStrategy {
     const duration =
       (transaction.exitTime!.getTime() - transaction.entryTime.getTime()) /
       (1000 * 60 * 60);
-    return duration * ParkingFees.Car;
+    return Number((duration * ParkingFees.Car).toFixed(2));
   }
 }

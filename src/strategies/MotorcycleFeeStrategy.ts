@@ -7,6 +7,6 @@ export class MotorcycleFeeStrategy implements FeeCalculationStrategy {
     const duration =
       (transaction.exitTime!.getTime() - transaction.entryTime.getTime()) /
       (1000 * 60 * 60);
-    return duration * ParkingFees.Motorcycle;
+    return Number((duration * ParkingFees.Motorcycle).toFixed(2));
   }
 }
