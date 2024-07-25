@@ -34,11 +34,14 @@ export class ParkingLotService {
     return null;
   }
 
-  checkOut(vehicleNumberPlate: string): ParkingTransaction | null {
+  checkOut(
+    vehicleNumberPlate: string,
+    exitTime: Date
+  ): ParkingTransaction | null {
     const transaction =
       this.repository.findTransactionByVehicleNumberPlate(vehicleNumberPlate);
     if (transaction) {
-      transaction.exitTime = new Date();
+      transaction.exitTime = exitTime;
       transaction.fee = this.calculateFee(transaction);
       transaction.spot.isAvailable = true;
       return transaction;
