@@ -4,26 +4,31 @@ Low-level architecture for a backend system of a smart parking lot.
 
 ## Project Structure
 
-parking-system-lld/
-├── dist/
-├── src/
-│ ├── models/
-│ │ ├── ParkingSpot.ts
-│ │ ├── Vehicle.ts
-│ │ └── ParkingTransaction.ts
-│ ├── repositories/
-│ │ └── ParkingLotRepository.ts
-│ ├── services/
-│ │ └── ParkingLotService.ts
-│ ├── factories/
-│ │ └── ParkingSpotFactory.ts
-│ ├── strategies/
-│ │ ├── FeeCalculationStrategy.ts
-│ │ ├── CarFeeStrategy.ts
-│ │ ├── MotorcycleFeeStrategy.ts
-│ │ └── BusFeeStrategy.ts
-│ ├── index.ts
-└── package.json
+```bash
+├── README.md
+├── package-lock.json
+├── package.json
+├── src
+│   ├── factories
+│   │   └── ParkingSpotFactory.ts
+│   ├── index.ts
+│   ├── models
+│   │   ├── ParkingSpot.ts
+│   │   ├── ParkingTransaction.ts
+│   │   └── Vehicle.ts
+│   ├── repositories
+│   │   └── ParkingLotRepository.ts
+│   ├── services
+│   │   └── ParkingLotService.ts
+│   ├── strategies
+│   │   ├── BusFeeStrategy.ts
+│   │   ├── CarFeeStrategy.ts
+│   │   ├── FeeCalculationStrategy.ts
+│   │   └── MotorcycleFeeStrategy.ts
+│   └── utils
+│       └── ParkingFees.ts
+└── tsconfig.json
+```
 
 ## Models
 
